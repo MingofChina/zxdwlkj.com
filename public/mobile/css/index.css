@@ -1,0 +1,345 @@
+#index_banner{
+	height: 200px;
+}
+#index_banner .swiper-slide{
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	overflow: hidden;
+	display: flex;
+	align-items: center;
+	overflow: hidden;
+}
+#index_banner .swiper-slide img{
+	height: 100%;
+}
+.index_column_title{
+	margin: 15px 10px;
+	font-size: 2rem;
+	color: #333333;
+	font-weight: bold;
+	display: flex;
+	align-items: center;
+}
+.index_column_title::before{
+	content: "";
+	width: 10px;
+	height: 10px;
+	border-radius: 10px;
+	border:#008bd0 solid 5px;
+	margin-right: 10px;
+}
+.insurance_calculator .con{
+	padding: 0 10px 10px 10px;
+}
+.insurance_calculator .con .text{
+	color: #98a99e;
+	font-size: 1.5rem;
+	line-height: 1.6em;
+	margin: 10px 0;
+}
+.insurance_calculator .con .form .item{
+	box-sizing: border-box;
+	font-size: 1.6rem;
+	color: #333;
+	padding: 10px;
+	border-radius: 5px;
+}
+.insurance_calculator .con .form .item:nth-child(even){
+	background: #f6f6f6;
+}
+.insurance_calculator .con .form .item>div:last-child{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-top: 5px;
+}
+.insurance_calculator .con .form .item>div:last-child input,.insurance_calculator .con .form .item>div:last-child select{
+	box-sizing: border-box;
+	flex: auto;
+	border: #d7decc solid 1px;
+	border-radius: 5px;
+	padding: 10px;
+}
+.insurance_calculator .con .form .item>div:first-child{
+	color: #666;
+	font-size: 1.4rem;
+}
+.insurance_calculator .con .form .item>div:last-child .unit{
+	width: 50px;
+	margin-left: 10px;
+}
+.insurance_calculator .con .form .item>div:last-child input:focus{
+	border: #008bd0 solid 1px;
+}
+.insurance_calculator .con .form .item>div:last-child input[type=radio]{
+	display: none;
+}
+.insurance_calculator .con .form .item>div:last-child input[type=radio]+.icon{
+	display: inline-block;
+	width: 15px;
+	height: 15px;
+	border-radius: 15px;
+	border: #999 solid 2px;
+	vertical-align: middle;
+	margin-right: 5px;
+}
+.insurance_calculator .con .form .item>div:last-child input[type=radio]:checked+.icon{
+	border: #008bd0 solid 2px;
+}
+.insurance_calculator .con .form .item>div:last-child input[type=radio]:checked+.icon::after{
+	content: "";
+	width: 9px;
+	height: 9px;
+	border-radius: 9px;
+	background: #008bd0;
+	margin: 3px;
+	display: block;
+}
+.insurance_calculator .btn_group{
+	text-align: center;
+	margin: 10px;
+}
+.insurance_calculator .btn_group button{
+	border: 0;
+	width: 100px;
+	height: 40px;
+	color: #fff;
+	font-size: 2rem;
+	cursor: pointer;
+}
+.insurance_calculator .btn_group button:hover{
+	opacity: 0.8;
+}
+.insurance_calculator .btn_group button:first-child{
+	background: #00acdf;
+	border-radius: 26px 0px 0px 26px/26px 0px 0px 26px;
+}
+.insurance_calculator .btn_group button:last-child{
+	background: #008bd0;
+	border-radius: 0px 26px 26px 0px/0px 26px 26px 0px;
+}
+.hot_product{
+	background: #f1f5f7;
+	padding: 15px 0;
+}
+.product_list_big li{
+	background: #fff;
+	margin: 15px;
+}
+.product_list_big .pic{
+	width: 100%;
+	height: 150px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	overflow: hidden;
+	background-position:center;
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+.product_list_big .pic:hover{
+	transform: scale(1.1);
+}
+.product_list_big .pic img{
+	height: 100%;
+}
+.product_list_big .text{
+	position: relative;
+	background: #fff;
+	border-radius: 10px;
+	padding: 15px;
+	text-align: center;
+}
+.product_list_big .name{
+	font-size: 1.8rem;
+	color: #333;
+}
+.product_list_big .remark{
+	font-size: 1.5rem;
+	color: #999;
+	margin: 10px 0;
+}
+.product_list_big .btn{
+	display: inline-block;
+	background: #008BD0;
+	color: #fff;
+	font-size: 1.6rem;
+	padding: 10px 40px;
+	border-radius: 5px;
+}
+.product_list_big .btn:hover{
+	background: #00acdf;
+}
+.more{
+	display: block;
+	width: 180px;
+	height: 40px;
+	text-align: center;
+	line-height: 40px;
+	color: #fff;
+	background: #00ACDF;
+	font-size: 1.8rem;
+	border-radius: 20px;
+	margin: 20px auto;
+}
+.more:hover{
+	background: #007DDB;
+}
+.more_text{
+	text-align: center;
+	font-size: 1.4rem;
+	color: #999;
+	margin: 0 10px 30px 10px;
+}
+.contrast{
+	background: url(../imgs/page_banner.jpg) center top no-repeat;
+	background-size: auto 150px; 
+	padding: 15px 0;
+}
+.contrast .index_column_title{
+	color: #fff;
+}
+.contrast .index_column_title::before{
+	border:#fff solid 5px;
+}
+.contrast_list li{
+	background: #fff;
+	border: #f0f0f0 solid 2px;
+	border-radius: 5px;
+	padding: 10px;
+	margin: 10px;
+	font-size: 1.5rem;
+}
+.contrast_list li.active{
+	border: #008bd0 solid 2px;
+	background: #e2f1f9;
+}
+.contrast_list li>div{
+	display: flex;
+	justify-content: space-between;
+}
+.contrast_list .name{
+	font-size: 1.6rem;
+	color: #333;
+	font-weight: bold;
+}
+.contrast_list .contrast_btn{
+	color: #008BD0;
+	font-size: 1.6rem;
+	border: #008BD0 solid 2px;
+	border-radius: 20px;
+	background: url(../imgs/contrast_icon_01.png) 10px center no-repeat;
+	background-size: 15px auto;
+	padding: 5px 20px 5px 35px;
+	cursor: pointer;
+}
+.contrast_list .contrast_btn:hover{
+	opacity: 0.8;
+}
+.contrast_list li.active .contrast_btn{
+	background: #008bd0 url(../imgs/contrast_icon_02.png) 10px center no-repeat;
+	background-size: 15px auto;
+	color: #fff;
+}
+.contrast_list .introduce{
+	margin: 10px 0;
+}
+.contrast_list .introduce>div{
+	margin: 0 5px;
+}
+.contrast_list .introduce .key{
+	font-size: 1.3rem;
+	color: #999;
+}
+.contrast_list .introduce .val{
+	color: #008bd0;
+	font-weight: bold;
+	margin-top: 5px;
+	font-size: 1.8rem;
+}
+.contrast_list .apply_btn{
+	background: #008BD0;
+	font-weight: bold;
+	color: #fff;
+	padding: 10px 30px;
+	border-radius: 5px;
+	cursor: pointer;
+}
+.contrast_list .apply_btn:hover{
+	background: #00acdf;
+}
+.contrast_fixed{
+	position: fixed;
+	width: 80%;
+	bottom: 20px;
+	left: 10%;
+	z-index: 9999;
+	display: none;
+}
+.contrast_fixed>div{
+	display: flex;
+	align-items: center;
+}
+.contrast_fixed .icon{
+	height: 50px;
+	width: 60px;
+	border-radius: 50px 0px 0px 50px/50px 0px 0px 50px;
+	background: #008bd0 url(../imgs/contrast_icon_02.png) center no-repeat;
+	background-size: 15px;
+	position: relative;
+	box-shadow: 0px 0px 5px rgba(0,0,0,0.5);
+}
+.contrast_fixed .icon span{
+	position: absolute;
+	text-align: center;
+	top: 5px;
+	left: 5px;
+	width: 20px;
+	height: 20px;
+	text-align: center;
+	line-height: 20px;
+	color: #fff;
+	background: red;
+	border-radius: 100%;
+}
+.contrast_fixed .contrast_btn{
+	flex: auto;
+	height: 50px;
+	line-height: 50px;
+	text-align: center;
+	border-radius: 0px 50px 50px 0px/0px 50px 50px 0px;
+	background: #008bd0;
+	color: #fff;
+	font-size: 2rem;
+	font-weight: bold;
+	margin-left: 3px;
+	cursor: pointer;
+	box-shadow: 0px 0px 5px rgba(0,0,0,0.5);
+}
+.contrast_fixed .contrast_btn:hover{
+	background: #00acdf;
+}
+.contrast_fixed .del_btn{
+	display: block;
+	height: 50px;
+	width: 50px;
+	border-radius: 100%;
+	background: #f1b968 url(../imgs/del_icon.png) center no-repeat;
+	background-size: 20px;
+	margin-left: 5px;
+	cursor: pointer;
+	box-shadow: 0px 0px 5px rgba(0,0,0,0.5);
+}
+.fly-into{
+	position: fixed;
+	width: 10px;
+	height: 10px;
+	border-radius: 100%;
+	background: red;
+	z-index: 10000;
+	 -webkit-transition:none;
+	-o- transition:none;
+	 -moz-transition:none;
+	 transition:none;
+}

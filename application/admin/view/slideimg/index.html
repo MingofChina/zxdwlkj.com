@@ -1,0 +1,80 @@
+
+
+{extend name="layout/layout3" /}
+{block name="content"}
+<div class="layui-body">
+    <!--tab标签-->
+    <div class="layui-tab layui-tab-brief">
+        <ul class="layui-tab-title">
+            <li class="layui-this">查看幻灯片</li>
+        </ul>
+        <div class="layui-tab-content">
+
+            <hr>
+
+                <div class="layui-tab-item layui-show">
+                    <!-- <form id="ids" action="{:url('admin/goods/daochu')}" method="post"> -->
+                    <table class="layui-table">
+                        <thead>
+                        <tr>
+                            <!-- <th style="width:80px;"><input type="checkbox"  name="quanxuan" id="quan"> 全选</th> -->
+                            <th style="width: 30px;">ID</th>
+                            <th>幻灯片</th>
+                            <th>展示位置</th>
+                            
+                           
+                            <th>操作</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        {foreach name="data" item="vo"}
+                        <tr>
+                            <!-- <td align="center" style="width:80px;"><input type="checkbox"  class="xuan" name="id[]" value="{$vo.id}"></td> -->
+                            <td>{$vo.id}</td>
+                            <td><img style="width:120px;height:80px;" src="{$vo.img}"></td>
+                            <td>{if condition="($vo.cate_id eq 1)"}相册展示{else /}门店展示{/if}</td>
+                            
+                           
+                            
+                            <td>
+                                <!-- <a href="{:url('slideimg/update',array('id'=>$vo.id))}" class="layui-btn layui-btn-normal layui-btn-mini">修改</a> -->
+
+                                
+                                <a href="{:url('slideimg/del',array('id'=>$vo.id))}" class="layui-btn layui-btn-danger layui-btn-mini ajax-delete">删除</a>
+                            </td>
+                        </tr>
+                        {/foreach}
+                        </tbody>
+                    </table>
+                    <!--分页-->
+                    
+                </div>
+            <!-- </form> -->
+        </div>
+    </div>
+</div>
+{/block}
+<!-- {$article_list->render()} -->
+
+{block name="js"}
+    <!-- <script type="text/javascript">
+        $('#daochu').click(function(){
+            $('#ids').submit();
+        })
+    </script>
+
+    <script type="text/javascript">
+        $('#quan').click(function(){
+            console.log($(this).prop("checked"));
+            if($(this).prop("checked") == true){
+                $('.xuan').prop('checked',true);
+
+                
+            }else{
+                $('.xuan').prop('checked',false);
+                
+            
+            }
+        })
+    </script> -->
+{/block}

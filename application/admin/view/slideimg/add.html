@@ -1,0 +1,83 @@
+{extend name="layout/layout3" /}
+{block name="content"}
+<div class="layui-body">
+    <!--tab标签-->
+    <div class="layui-tab layui-tab-brief">
+        <ul class="layui-tab-title">
+            <li class="">添加幻灯片</li>
+            <!-- <li class="layui-this">添加文章</li> -->
+        </ul>
+        <div class="layui-tab-content">
+            <div class="layui-tab-item layui-show">
+                <form id="good" class="layui-form form-container" action="{:url('slideimg/zuoadd')}" method="post">
+                    <div class="layui-form-item">
+                        <label class="layui-form-label">所属类别</label>
+                        <div class="layui-input-block">
+                            <select name="cate_id" lay-verify="required">
+                                
+                                
+                                
+                                <option value="1">相册幻灯片</option>
+                                <option value="2">门店大使</option>
+                                
+                               
+                            </select>
+                        </div>
+                    </div>
+
+
+                    <div class="layui-form-item">
+                        <label class="layui-form-label">幻灯片</label>
+                        <div class="layui-input-block">
+                            <input type="hidden" id="pic" name="img" value="">
+                            <input type="file" onchange="picUpload()" name="slt" >
+                        </div>
+                    </div>
+
+                    <div class="layui-form-item">
+                        <label class="layui-form-label">幻灯片展示</label>
+                        <div class="layui-input-block" style="display:none;">
+                            <img src="" id="slideimg">
+                        </div>
+                    </div>
+                   
+                    <div class="layui-form-item">
+                        <div class="layui-input-block">
+                            <button class="layui-btn" lay-submit lay-filter="*">保存</button>
+                            <button type="reset" class="layui-btn layui-btn-primary">重置</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+{/block}
+
+{block name="js"}
+    <script type="text/javascript">
+        //给表单元素绑定change事件
+        function picUpload(){
+            $.ajax({
+                url:"{:url('slideimg/picUpload')}",
+                type:'POST',
+                cache:false,
+                data:new FormData($('#good')[0]),
+                processData:false,
+                contentType:false,
+                dataType:"text",
+                success:function(data){
+                    console.log(data);
+                    $('#pic').attr('value',data);
+                    $('#slideimg').attr('src',data);
+                    $('#slideimg').parent().css('display','block');
+                },
+                error:function(data){
+                    console.log(data);
+                    // $('#pic').attr('value',data);
+                },
+                async:false
+            });
+        }
+    </script>
+{/block}

@@ -1,0 +1,120 @@
+#page_nav{
+	padding: 10px;
+	background: linear-gradient(#e7f7ff,#fff);
+}
+#page_nav .swiper-slide{
+	width: 30%;
+	margin: 0 1.5%;
+}
+#page_nav a{
+	text-align: center;
+	display: block;
+	font-size: 1.6rem;
+	color: #666;
+	background: #f0f0f0;
+	border-radius: 22px;
+	padding: 5px 0;
+}
+#page_nav a.active{
+	background: #008BD0;
+	color: #fff;
+}
+#page_nav a:hover{
+	opacity: 0.8;
+}
+.news_list{
+	overflow: hidden;
+}
+.news_list li{
+	margin: 10px;
+}
+.news_list li a{
+	display: block;
+	background: #fff;
+	border-radius: 10px;
+	padding: 10px;
+	-webkit-transition:none;
+	-o- transition:all none;
+	 -moz-transition:none;
+	 transition:none;
+}
+.news_list li p:first-child{
+	font-size: 1.8rem;
+	font-weight: bold;
+	color: #333;
+	display: flex;
+	-webkit-transition:none;
+	-o- transition:all none;
+	 -moz-transition:none;
+	 transition:none;
+}
+.news_list li p:first-child::before{
+	content: "";
+	width: 5px;
+	background: #008BD0;
+	border-radius: 5px;
+	margin-right: 10px;
+	-webkit-transition:none;
+	-o- transition:all none;
+	 -moz-transition:none;
+	 transition:none;
+}
+.news_list li p:last-child{
+	font-size: 1.3rem;
+	margin-top: 5px;
+	color: #999;
+	-webkit-transition:none;
+	-o- transition:all none;
+	 -moz-transition:none;
+	 transition:none;
+}
+.news_list li a:hover{
+	background: #008BD0;
+}
+.news_list li a:hover p:first-child{
+	color: #fff;
+}
+.news_list li a:hover p:first-child::before{
+	background: #fff;
+}
+.news_list li a:hover p:last-child{
+	color: #fff;
+	opacity: 0.5;
+}
+.zhengwen{
+padding: 20px 10px;
+background: #fff;
+}
+.zhengwen .zwbt{
+font-size:2rem;
+font-weight:normal;
+text-align:center;
+margin-bottom:20px;}
+.zhengwen .zwbz{
+margin-bottom:20px;
+color:#a5a5a5;
+border-bottom: #dfdfdf solid 1px;
+height: 20px;
+line-height: 20px;
+padding-bottom: 10px;}
+.zhengwen .zwbz p:first-child{
+	float: left;
+}
+.zhengwen .zwbz p:last-child{
+	float: right;
+}
+.zhengwenNr{
+color:#2a2a2a;
+line-height:1.8em;
+overflow:hidden;
+font-size: 1.6rem;
+}
+.zhengwenNr img{
+max-width:100%;
+}
+.zhengwenNr a{
+	color: #FF7800;
+}
+.zhengwenNr a:hover{
+	text-decoration: underline;
+}

@@ -1,0 +1,61 @@
+.product_info .pic{
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	display: flex;
+	align-items: center;
+	overflow: hidden;
+}
+.product_info .pic img{
+	width: 100%;
+}
+.product_info .info {
+	padding: 15px;
+}
+.product_info .info .name{
+	font-size: 2rem;
+	font-weight: bold;
+}
+.product_info .info p{
+	font-size: 1.6rem;
+	color: #686868;
+	margin-top: 10px;
+}
+.product_info .info .btn{
+	border-radius: 20px;
+	margin: 20px 10%;
+	display: block;
+	height: 40px;
+	line-height: 40px;
+	background: #008BD0;
+	color: #fff;
+	font-size: 2rem;
+	font-weight: bold;
+	text-align: center;
+}
+.product_info .info .btn:hover{
+	opacity: 0.8;
+}
+.product_info_detail{
+	background: #fff;
+}
+.layui-tab-brief>.layui-tab-more li.layui-this:after, .layui-tab-brief>.layui-tab-title .layui-this:after{
+	border-bottom: 0;
+}
+.layui-tab-brief>.layui-tab-title .layui-this{
+	color: #fff;
+	background: #008BD0;
+}
+.product_info_detail .layui-tab-content{
+	min-height: 500px;
+	padding: 10px;
+	line-height: 1.6em;
+	font-size: 1.6rem;
+	color: #555;
+}
+.product_info_detail .layui-tab-content p{
+	margin: 15px 0;
+}
+.product_info_detail .layui-tab-content img{
+	max-width: 100%;
+}

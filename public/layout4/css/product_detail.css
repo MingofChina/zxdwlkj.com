@@ -1,0 +1,81 @@
+
+.product_info{
+	display: flex;
+	justify-content: space-between;
+}
+.product_info .pic{
+	width: 600px;
+	height: 400px;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	display: flex;
+	align-items: center;
+	overflow: hidden;
+}
+.product_info .pic img{
+	width: 100%;
+}
+.product_info .info{
+	width: 870px;
+}
+.product_info .info .name{
+	font-size: 24px;
+	font-weight: bold;
+}
+.product_info .info p{
+	font-size: 16px;
+	color: #686868;
+	margin-top: 16px;
+}
+.product_info .info .btn{
+	border-radius: 25px;
+	margin: 50px 20px 0px 20px;
+	display: block;
+	height: 50px;
+	width: 200px;
+	background: #008BD0;
+	color: #fff;
+	font-size: 26px;
+	font-weight: bold;
+	text-align: center;
+	line-height: 50px;
+}
+.product_info .info .btn:hover{
+	opacity: 0.8;
+}
+.product_info_detail{
+	background: #fff;
+	margin-top: 20px;
+}
+.layui-tab-title{
+	height: auto;
+	border-bottom: #008BD0 solid 3px;
+}
+.layui-tab-title li{
+	font-size: 22px;
+	padding: 10px 50px;
+}
+.layui-tab-title .layui-this:after{
+	height: 100%;
+}
+.layui-tab-brief>.layui-tab-more li.layui-this:after, .layui-tab-brief>.layui-tab-title .layui-this:after{
+	border-bottom: 0;
+}
+.layui-tab-brief>.layui-tab-title .layui-this{
+	color: #fff;
+	background: #008BD0;
+}
+.product_info_detail .layui-tab-content{
+	min-height: 500px;
+	padding: 20px;
+	line-height: 1.6em;
+	font-size: 16px;
+	color: #555;
+}
+.product_info_detail .layui-tab-content p{
+	margin: 15px 0;
+}
+.product_info_detail .layui-tab-content img{
+	max-width: 100%;
+}

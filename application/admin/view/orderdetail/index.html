@@ -1,0 +1,95 @@
+
+
+{extend name="layout/layout3" /}
+{block name="content"}
+<div class="layui-body">
+    <!--tab标签-->
+    <div class="layui-tab layui-tab-brief">
+        <ul class="layui-tab-title">
+            <li class="layui-this">查看预约</li>
+        </ul>
+        <div class="layui-tab-content">
+            <form class="layui-form layui-form-pane" action="{:url('admin/orderdetail/search')}" method="get">
+                <div class="layui-inline">
+                    <label class="layui-form-label">地点分类</label>
+                    <div class="layui-input-inline">
+                        <select name="name">
+                            <option value="0">全部</option>
+                            <!-- {foreach name="category_level_list" item="vo"}
+                            <option value="{$vo.id}" {if condition="$cid==$vo.id"} selected="selected"{/if}>{neq name="vo.level" value="1"}|{php}for($i=1;$i<$vo['level'];$i++){echo ' ----';}{/php}{/neq} {$vo.name}</option>
+                            {/foreach} -->
+
+                            {foreach name="placess" item="vo"}
+                                <option value="{$vo.name}">{$vo.name}</option>
+                            {/foreach}
+                        </select>
+                    </div>
+                </div>
+                <div class="layui-inline">
+                    <label class="layui-form-label">关键词</label>
+                    <div class="layui-input-inline">
+                        <input type="text" name="keyword" value="{$keyword}" placeholder="请输入关键词" class="layui-input">
+                    </div>
+                </div>
+                <div class="layui-inline">
+                    <button class="layui-btn">搜索</button>
+                </div>
+            </form>
+            <hr>
+
+                <div class="layui-tab-item layui-show">
+                    <!-- <button type="button" class="layui-btn layui-btn-small ajax-action" data-action="{:url('admin/article/toggle',['type'=>'audit'])}">审核</button>
+                    <button type="button" class="layui-btn layui-btn-warm layui-btn-small ajax-action" data-action="{:url('admin/article/toggle',['type'=>'cancel_audit'])}">取消审核</button>
+                    <button type="button" class="layui-btn layui-btn-danger layui-btn-small ajax-action" data-action="{:url('admin/article/delete')}">删除</button> -->
+                    <table class="layui-table">
+                        <thead>
+                        <tr>
+                            <!-- <th style="width:80px;"><input type="checkbox"  name="quanxuan" id="quan"> 全选</th> -->
+                            <!-- <th style="width: 30px;">ID</th> -->
+                            <th>活动名称</th>
+                            <th>活动地点</th>
+                            <th>预约人姓名</th>
+                            <th>预约人电话</th>
+                            <th>开始时间</th>
+                            <th>结束时间</th>
+                            
+                            
+
+                            <th>操作</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        {foreach name="data" item="vo"}
+                        <tr>
+                            <!-- <td align="center" style="width:80px;"><input type="checkbox"  class="xuan" name="id[]" value="{$vo.id}"></td> -->
+                            <!-- <td>{$vo.id}</td> -->
+                            <td>{$vo.title}</td>
+                            <td>{$vo.place}</td>
+                            <td>{$vo.contact}</td>
+                            <td>{$vo.phone}</td>
+                            <td>{$vo.start_time}</td>
+                            <td>{$vo.end_time}</td>
+                            <td>
+                                {if condition="($vo.order_status eq 0)"}
+                                <a href="{:url('orderdetail/status',array('id'=>$vo.id))}" class="layui-btn layui-btn-normal layui-btn-mini">未联系</a>
+                                {else /}
+                                <a class="layui-btn layui-btn-normal layui-btn-mini">已联系</a>
+                                {/if}
+                            	
+
+                                <a href="{:url('orderdetail/del',array('id'=>$vo.id))}" class="layui-btn layui-btn-danger layui-btn-mini ajax-delete">删除</a>
+                            </td>
+                        </tr>
+                        {/foreach}
+                        </tbody>
+                    </table>
+                    <!--分页-->
+                    {$data->render()}
+                </div>
+            <!-- </form> -->
+        </div>
+    </div>
+</div>
+{/block}
+<!-- {$article_list->render()} -->
+

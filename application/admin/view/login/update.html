@@ -1,0 +1,48 @@
+
+
+{extend name="layout/layout3" /}
+{block name="content"}
+<div class="layui-body">
+    <!--tab标签-->
+    <div class="layui-tab layui-tab-brief">
+        <ul class="layui-tab-title">
+            <li class="">更改管理员密码</li>
+            <!-- <li class="layui-this">添加文章</li> -->
+        </ul>
+        <div class="layui-tab-content">
+            <div class="layui-tab-item layui-show">
+                <form class="layui-form form-container" action="{:url('login/zuoupdate')}" method="post">
+                    
+                    <div class="layui-form-item">
+                        <label class="layui-form-label">原密码</label>
+                        <div class="layui-input-block">
+                            <input type="password" name="password" value="" required  lay-verify="required" placeholder="请输入密码" class="layui-input">
+                        </div>
+                    </div>
+
+                    <div class="layui-form-item">
+                        <label class="layui-form-label">新密码</label>
+                        <div class="layui-input-block">
+                            <input type="password" name="newpassword" value="" required  lay-verify="required" placeholder="请输入密码" class="layui-input">
+                        </div>
+                    </div>
+
+                    <div class="layui-form-item">
+                        <label class="layui-form-label">确认密码</label>
+                        <div class="layui-input-block">
+                            <input type="password" name="password_confirm" value="" required  lay-verify="required" placeholder="请输入密码" class="layui-input">
+                        </div>
+                    </div>
+                    
+                    <div class="layui-form-item">
+                        <div class="layui-input-block">
+                            <button class="layui-btn" lay-submit lay-filter="*">保存</button>
+                            <button type="reset" class="layui-btn layui-btn-primary">重置</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+{/block}

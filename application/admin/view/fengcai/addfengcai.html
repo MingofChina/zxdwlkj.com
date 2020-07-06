@@ -1,0 +1,280 @@
+{extend name="layout/layout3" /}
+
+{block name="css"}
+    <link type="text/css" rel="stylesheet" href="/public/times/1.css">
+    
+{/block}
+
+{block name="content"}
+<div class="layui-body">
+    <!--tab标签-->
+    <div class="layui-tab layui-tab-brief">
+        <ul class="layui-tab-title">
+            <li class="">添加风采</li>
+            <!-- <li class="layui-this">添加文章</li> -->
+        </ul>
+        <div class="layui-tab-content">
+            <div class="layui-tab-item layui-show">
+                <form id="good" class="layui-form form-container" action="{:url('fengcai/zuoaddfengcai')}" enctype="multipart/form-data" method="post" >
+
+                    <div class="layui-form-item">
+                        <label class="layui-form-label">所属地点</label>
+                        <div class="layui-input-block">
+                            <select lay-filter="demo" id="xuanz"  name="place_cate" lay-verify="required">
+                                
+                                {foreach name="places" item="vo"}
+                                <option value="{$vo.id}">{$vo.name}</option>
+                                {/foreach}
+                                
+                               
+                            </select>
+                        </div>
+                    </div>
+
+                    
+
+                    <div class="layui-form-item">
+                        <label class="layui-form-label">风采图片</label>
+                        <div class="layui-input-block">
+                            <input type="hidden" id="fengcai_pic" name="pics" value="">
+                            
+
+                            <input type="file" name="slt" onchange="picUpload()">
+                        </div>
+                    </div>
+
+                    <div class="layui-form-item">
+                        <label class="layui-form-label">风采图片展示</label>
+                        <div class="layui-input-block">
+                            <div id="charu">
+                                <div style="float:left;margin-top:20px;display:none;" >
+                                    <!-- <a href="/public/uploads/20200620/6abac3dacda262280ce5da5db9331fb5.png" target="_blank"> -->
+                                        <img id="tup" src="/public/uploads/20200620/6abac3dacda262280ce5da5db9331fb5.png" class="imgss" style="width:100px;">
+                                    <!-- </a> -->
+                                    <!-- <img src="/public/file/images/cuo.png" style="width:20px;height:20px;position: relative;left:-16px;top:-46px;"> -->
+                                </div>
+
+
+                            </div>
+                        </div>
+                    </div>
+
+                    
+
+
+
+                    
+                   
+                    <div class="layui-form-item">
+                        <div class="layui-input-block">
+                            <button class="layui-btn" lay-submit lay-filter="*">保存</button>
+                            <button type="reset" class="layui-btn layui-btn-primary">重置</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+{/block}
+
+{block name="js"}
+    <script type="text/javascript">
+        //给表单元素绑定change事件
+        function picUpload(){
+            $.ajax({
+                url:"{:url('fengcai/picUpload')}",
+                type:'POST',
+                cache:false,
+                data:new FormData($('#good')[0]),
+                processData:false,
+                contentType:false,
+                dataType:"text",
+                success:function(data){
+                    console.log(data);
+                    $('#fengcai_pic').attr('value',data);
+                    $('#tup').attr('src',data);
+                    $('#tup').parent().css('display','block');
+                    
+                },
+                error:function(data){
+                    console.log(data);
+                    // $('#pic').attr('value',data);
+                },
+                async:false
+            });
+        }
+    </script>
+
+    <script type="text/javascript" charset="utf-8" src="/public/ueditor/ueditor.config.js"></script>
+    <script type="text/javascript" charset="utf-8" src="/public/ueditor/ueditor.all.min.js"> </script>
+    <!--建议手动加在语言，避免在ie下有时因为加载语言失败导致编辑器加载失败-->
+    <!--这里加载的语言文件会覆盖你在配置项目里添加的语言类型，比如你在配置项目里配置的是英文，这里加载的中文，那最后就是中文-->
+    <script type="text/javascript" charset="utf-8" src="/public/ueditor/lang/zh-cn/zh-cn.js"></script>
+    <script>
+        //实例化编辑器
+        //建议使用工厂方法getEditor创建和引用编辑器实例，如果在某个闭包下引用该编辑器，直接调用UE.getEditor('editor')就能拿到相关的实例
+          var ue = UE.getEditor('editor', {
+    toolbars: [
+            ['source', 'bold', 'italic', 'underline', 'strikethrough', 'blockquote', 'insertunorderedlist', 'insertorderedlist', 'justifyleft','justifycenter', 'justifyright',  'link', 'insertimage', 'fullscreen']
+        ],
+        elementPathEnabled: false,
+        enableContextMenu: false,
+        autoClearEmptyNode:true,
+        wordCount:false,
+        imagePopup:false,
+        autotypeset:{ indent: true,imageBlockLine: 'center' }
+    });
+
+          
+
+
+    </script>
+
+    <!-- <script type="text/javascript" src="/public/timejs/laydate.js"></script>
+    <script type="text/javascript">
+        !function(){
+            laydate.skin('molv');//切换皮肤，请查看skins下面皮肤库
+            laydate({elem: '#demo'});//绑定元素
+        }();
+    </script> -->
+
+    <script type="text/javascript" src="/public/times/1.js"></script>
+    <script type="text/javascript">
+        // demo1
+        // var picker1 = new Datepicker({
+        //     elemName: 'date1',
+        //     format: 'YYYY-MM-DD hh:mm:ss',
+        //     min: -4,
+        //     callBack: function(a, b){
+        //         console.log(a, b)
+        //     }
+        // });
+
+        
+    </script>
+
+    <!-- <script type="text/javascript">
+        function erpicUpload(){
+
+            $.ajax({
+                url:"{:url('active/erpicUpload')}",
+                type:'POST',
+                cache:false,
+                data:new FormData($('#good')[0]),
+                processData:false,
+                contentType:false,
+                dataType:"text",
+                success:function(data){
+                    console.log(data);
+                    var str = '';
+                   
+
+                    str += `
+                        <div style="float:left;margin-top:20px;">
+                            <a href="${data}" target="_blank">
+                                <img src="${data}" class="imgss" style="width:100px;height:100px;">
+                            </a>
+                            <img src="/public/file/images/cuo.png" class="sss" style="width:20px;height:20px;position: relative;left:-16px;top:-46px;">
+                        </div>
+                    `;
+                    
+                    $('#charu').append(str);
+                    shanchu();
+
+                    chongzhi();
+                },
+                error:function(data){
+                    console.log(123);
+                    console.log(data);
+                }
+            });
+        }
+
+        function shanchu(){
+            $('.sss').click(function(){
+                $(this).parent().remove();
+                chongzhi();
+            })
+        }
+
+        function chongzhi(){
+            var pinjie = '';
+            $('.imgss').each(function(){
+                pinjie += $(this).attr('src') + ',';
+            });
+            // console.log(pinjie);
+            $('#detail_pics').val(pinjie);
+        }
+    </script>
+
+    <script type="text/javascript">
+        
+
+        layui.use(['layer', 'jquery', 'form'], function () {
+            var layer = layui.layer,
+                    $ = layui.jquery,
+                    form = layui.form();
+ 
+            form.on('select(demo)', function(data){
+                // console.log(data);
+                var id = data.value;
+
+                // console.log(id);
+                tupianhuoqu(id);
+            });
+        });
+
+        function tupianhuoqu(id){
+            $.ajax({
+                    url:"{:url('fengcai/fengcaitu')}",
+                    type:'POST',
+                    cache:false,
+                    data:{'id':id},
+                    
+                    dataType:"text",
+                    success:function(data){
+
+                        $('#charu').empty();
+                        // console.log(data);
+                        var arr = data.split(',');
+                        // console.log(arr);
+                        var str = '';
+                        $.each(arr,function(index,value){
+                            // console.log(value);
+
+                            if(value){
+                                str += `
+                                    <div style="float:left;margin-top:20px;">
+                                        <a href="${value}" target="_blank">
+                                            <img src="${value}" class="imgss" style="width:100px;height:100px;">
+                                        </a>
+                                        <img src="/public/file/images/cuo.png" class="sss" style="width:20px;height:20px;position: relative;left:-16px;top:-46px;">
+                                    </div>
+                                `;
+                            }
+                            
+                            
+                            
+                        })
+                        
+                        $('#charu').append(str);
+                        shanchu();
+
+                        chongzhi();
+
+                        
+                    },
+                    error:function(data){
+                        console.log(123);
+                        console.log(data);
+                    }
+                });
+        }
+
+        // console.log($('#xuanz').val());
+
+        tupianhuoqu($('#xuanz').val());
+
+    </script> -->
+{/block}

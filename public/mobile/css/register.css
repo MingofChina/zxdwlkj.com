@@ -1,0 +1,44 @@
+.content{
+	padding-bottom: 20px;
+}
+.title{
+	font-size: 2.5rem;
+	font-weight: bold;
+	text-align: center;
+	padding: 20px 0;
+}
+.register{
+	background: #fff;
+	padding: 20px;
+	background: #fff;
+	border-radius: 10px;
+	border: #f0f0f0 solid 1px;
+	margin: 0px 10px;
+	display: flex;
+	align-items: center;
+}
+.register .welcome{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+.register .welcome .txt{
+	color: #008BD0;
+	font-size: 24px;
+	text-align: center;
+	margin: 20px 0;
+}
+.register .welcome .txt p:last-child{
+	font-size: 36px;
+}
+.register .welcome .tips{
+	font-size: 18px;
+	color: #7f7f7f;
+}
+.register a{
+	color: #008BD0;
+}
+.register a:hover{
+	text-decoration: underline;
+}

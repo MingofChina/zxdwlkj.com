@@ -1,0 +1,48 @@
+{extend name="layout/layout3" /}
+
+{block name="css"}
+    <link type="text/css" rel="stylesheet" href="/public/times/1.css">
+    
+{/block}
+
+{block name="content"}
+<div class="layui-body">
+    <!--tab标签-->
+    <div class="layui-tab layui-tab-brief">
+        <ul class="layui-tab-title">
+            <li class="">添加城市地点</li>
+            <!-- <li class="layui-this">添加文章</li> -->
+        </ul>
+        <div class="layui-tab-content">
+            <div class="layui-tab-item layui-show">
+                <form id="good" class="layui-form form-container" action="{:url('places/zuoaddplaces')}" method="post">
+
+                    <div class="layui-form-item">
+                        <label class="layui-form-label">城市地点</label>
+                        <div class="layui-input-block">
+                            <input type="text" name="name" value="" required  lay-verify="required" placeholder="请输入地点" class="layui-input">
+                        </div>
+                    </div>
+
+                    
+
+
+
+                    
+                   
+                    <div class="layui-form-item">
+                        <div class="layui-input-block">
+                            <button class="layui-btn" lay-submit lay-filter="*">保存</button>
+                            <button type="reset" class="layui-btn layui-btn-primary">重置</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+{/block}
+
+{block name="js"}
+    
+{/block}

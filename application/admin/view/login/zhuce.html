@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+
+<!--[if lt IE 7]> <html class="lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+
+<!--[if IE 7]>    <html class="lt-ie9 lt-ie8" lang="en"> <![endif]-->
+
+<!--[if IE 8]>    <html class="lt-ie9" lang="en"> <![endif]-->
+
+<!--[if gt IE 8]><!--><html lang="en"><!--<![endif]-->
+
+<head>
+
+<meta charset="utf-8">
+
+
+
+<!-- Viewport Metatag -->
+
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+
+
+
+<!-- Required Stylesheets -->
+
+<link rel="stylesheet" type="text/css" href="/public/file/bootstrap/css/bootstrap.min.css" media="screen">
+
+<link rel="stylesheet" type="text/css" href="/public/file/css/fonts/ptsans/stylesheet.css" media="screen">
+
+<link rel="stylesheet" type="text/css" href="/public/file/css/fonts/icomoon/style.css" media="screen">
+
+
+
+<link rel="stylesheet" type="text/css" href="/public/file/css/login.css" media="screen">
+
+
+
+<link rel="stylesheet" type="text/css" href="/public/file/css/mws-theme.css" media="screen">
+
+
+
+<title>校之宝经销商运营管理系统</title>
+
+<style type="text/css">
+	#mws-login-wrapper {
+	    width: 437px;
+	    left: 47%;
+	    top: 20%;
+	    /*margin-left: -150px;
+	    margin-top: -142px;
+	    position: absolute;*/
+	}
+</style>
+
+
+
+</head>
+
+
+
+<body>
+
+
+
+    <div id="mws-login-wrapper">
+
+        <div id="mws-login">
+
+            <h1>校之宝经销商运营管理系统注册</h1>
+
+            <div class="mws-login-lock"><i class="icon-lock"></i></div>
+
+            <div id="mws-login-form" style="color:white;">
+
+                <form class="mws-form" action="{:url('Login/zuozhuce')}" method="post">
+
+                    <input type="hidden" name="__token__" value="{$Request.token}">
+
+                    <div class="mws-form-row">
+                        
+                        <div class="mws-form-item">
+                            <div style="width:80px;float:left;">登录账号：</div>
+                            <input type="text" style="width:318px;" name="zhanghao" class="" placeholder="要申请的账号">
+
+                        </div>
+
+                    </div>
+
+                    <div class="mws-form-row">
+
+                        <div class="mws-form-item">
+                            <div style="width:80px;float:left;">登录密码：</div>
+                            <input type="text" name="mima" style="width:318px;" class="" placeholder="要申请的密码">
+
+                        </div>
+
+                    </div>
+
+                    <div class="mws-form-row">
+                        
+                        <div class="mws-form-item">
+                            <div style="width:80px;float:left;">上级经销商：</div>
+                            <input type="text" style="width:318px;" name="shangji" class="" placeholder="上级经销商名称">
+
+                        </div>
+
+                    </div>
+
+                    <div class="mws-form-row">
+
+                        <div class="mws-form-item">
+                            <div style="width:80px;float:left;">所在区域：</div>
+                            <input type="text" style="width:318px;" name="suozaiquyu" class="" placeholder="所在区域">
+
+                        </div>
+
+                    </div>
+
+                    <div class="mws-form-row">
+
+                        <div class="mws-form-item">
+                            <div style="width:80px;float:left;">公司名称：</div>
+                            <input type="text" style="width:318px;" name="gongsimingcheng" class="" placeholder="公司名称">
+
+                        </div>
+
+                    </div>
+
+                    <div class="mws-form-row">
+
+                        <div class="mws-form-item">
+                            <div style="width:80px;float:left;">法人姓名：</div>
+                            <input type="text" style="width:318px;" name="farenxingming" class="" placeholder="法人姓名">
+
+                        </div>
+
+                    </div>
+
+                    <div class="mws-form-row">
+
+                        <div class="mws-form-item">
+                            <div style="width:80px;float:left;">社会信用代码</div>
+                            <input type="text" style="width:318px;" name="gongsixinyong" class="" placeholder="社会信用代码">
+
+                        </div>
+
+                    </div>
+
+                    <div class="mws-form-row">
+
+                        <div class="mws-form-item">
+                            <div style="width:80px;float:left;">公司账户：</div>
+                            <input type="text" style="width:318px;" name="gongsizhanghao" class="" placeholder="公司账户">
+
+                        </div>
+
+                    </div>
+
+                    <div class="mws-form-row">
+
+                        <div class="mws-form-item">
+                            <div style="width:80px;float:left;">开户行：</div>
+                            <input type="text" style="width:318px;" name="kaihuhang" class="" placeholder="开户行">
+
+                        </div>
+
+                    </div>
+
+                    <div class="mws-form-row">
+
+                        <div class="mws-form-item">
+                            <div style="width:80px;float:left;">公司电话：</div>
+                            <input type="text" style="width:318px;" name="gongsidianhua" class="" placeholder="公司电话">
+
+                        </div>
+
+                    </div>
+
+                    <div class="mws-form-row">
+
+                        <div class="mws-form-item">
+                            <div style="width:80px;float:left;">办公地址：</div>
+                            <input type="text" style="width:318px;" name="bangongdizhi" class="" placeholder="办公地址">
+
+                        </div>
+
+                    </div>
+
+                    <div class="mws-form-row">
+
+                        <div class="mws-form-item">
+                            <div style="width:80px;float:left;">联系人：</div>
+                            <input type="text" style="width:318px;" name="lianxiren" class="" placeholder="联系人">
+
+                        </div>
+
+                    </div>
+
+                    <div class="mws-form-row">
+
+                        <div class="mws-form-item">
+                            <div style="width:80px;float:left;">联系电话：</div>
+                            <input type="text" style="width:318px;" name="lianxidianhua" class="" placeholder="联系电话">
+
+                        </div>
+
+                    </div>
+
+                    <div class="mws-form-row">
+
+                        <div class="mws-form-item">
+                            <div style="width:80px;float:left;">邮箱地址：</div>
+                            <input type="text" style="width:318px;" name="email" class="" placeholder="邮箱地址">
+
+                        </div>
+
+                    </div>
+
+                    <div class="mws-form-row">
+
+                        <div class="mws-form-item">
+
+                            <!-- <input type="text" style="width:318px;" name="beizhu" class="" placeholder="备注"> -->
+                            <textarea type="text" style="width:400px;" name="beizhu" class="" placeholder="备注（你想说明的信息）"></textarea>
+
+                        </div>
+
+                    </div>
+
+                    <!-- <div id="mws-login-remember" class="mws-form-row mws-inset">
+
+                        <ul class="mws-form-list inline">
+
+                            <li>
+
+                                <input id="remember" type="checkbox"> 
+
+                                <label for="remember">Remember me</label>
+
+                            </li>
+
+                        </ul>
+
+                    </div> -->
+
+                    <div class="mws-form-row">
+
+                        <input type="submit" id="zhucean" value="注册" class="btn btn-success mws-login-button">
+
+                    </div>
+
+                </form>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- JavaScript Plugins -->
+
+    <script src="/public/file/js/libs/jquery-1.8.3.min.js"></script>
+
+    <script src="/public/file/js/libs/jquery.placeholder.min.js"></script>
+
+    <script src="/public/file/custom-plugins/fileinput.js"></script>
+
+    
+
+    <!-- jQuery-UI Dependent Scripts -->
+
+    <script src="/public/file/jui/js/jquery-ui-effects.min.js"></script>
+
+
+
+    <!-- Plugin Scripts -->
+
+    <script src="/public/file/plugins/validate/jquery.validate-min.js"></script>
+
+
+
+    <!-- Login Script -->
+
+    <script src="/public/file/js/core/login.js"></script>
+
+
+    <script type="text/javascript">
+        $('#zhucean').click(function(){
+            if(!$("input[name='zhanghao']").val() ||  !$("input[name='mima']").val() || !$("input[name='shangji']").val() || !$("input[name='suozaiquyu']").val() || !$("input[name='gongsimingcheng']").val() || !$("input[name='farenxingming']").val() || !$("input[name='gongsixinyong']").val() || !$("input[name='gongsizhanghao']").val() || !$("input[name='kaihuhang']").val() || !$("input[name='gongsidianhua']").val() || !$("input[name='bangongdizhi']").val() || !$("input[name='lianxiren']").val() || !$("input[name='lianxidianhua']").val() || !$("input[name='email']").val()){
+                alert("请把信息填写完整");
+                return false;
+            }
+
+            if($("input[name='zhanghao']").val().length < 2 || $("input[name='zhanghao']").val().length > 30){
+                alert('账户的长度要大于2，小于30');
+                return false;
+            }
+
+            if($("input[name='mima']").val().length < 2 || $("input[name='mima']").val().length > 30){
+                alert('密码的长度要大于2，小于30');
+                return false;
+            }
+        })
+    </script>
+</body>
+
+</html>

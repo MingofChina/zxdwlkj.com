@@ -1,0 +1,422 @@
+#index_banner{
+	height: 760px;
+	min-width: 1500px;
+}
+#index_banner .swiper-slide{
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	overflow: hidden;
+}
+#index_banner .swiper-slide img{
+	width: 100%;
+}
+.index_column_title{
+	height: 60px;
+	line-height: 60px;
+	width: 1500px;
+	margin: 30px auto;
+	font-size: 38px;
+	color: #333333;
+	font-weight: bold;
+	display: flex;
+	align-items: center;
+}
+.index_column_title::before{
+	content: "";
+	width: 20px;
+	height: 20px;
+	border-radius: 20px;
+	border:#008bd0 solid 8px;
+	margin-right: 15px;
+}
+.insurance_calculator .con{
+	width: 1500px;
+	margin: 30px auto;
+	display: flex;
+	justify-content: space-between;
+}
+.insurance_calculator .con>div:last-child{
+	flex: auto;
+	box-sizing: border-box;
+	padding-left: 40px;
+}
+.insurance_calculator .con .title{
+	color: #008BD0;
+	font-size: 30px;
+	font-weight: bold;
+	padding: 10px 0;
+	border-bottom: #008bd0 solid 3px;
+}
+.insurance_calculator .con .text{
+	color: #98a99e;
+	font-size: 20px;
+	line-height: 1.6em;
+	margin: 10px 0;
+}
+.insurance_calculator .con .form .item{
+	display: flex;
+	box-sizing: border-box;
+	justify-content: space-between;
+	align-items: center;
+	font-size: 20px;
+	color: #333;
+	padding: 10px 20px;
+	border-radius: 5px;
+}
+.insurance_calculator .con .form .item:nth-child(even){
+	background: #f6f6f6;
+}
+.insurance_calculator .con .form .item div{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+.insurance_calculator .con .form .item>div:first-child{
+	width: 720px;
+}
+.insurance_calculator .con .form .item>div:last-child{
+	flex: auto;
+}
+.insurance_calculator .con .form .item>div:last-child input{
+	box-sizing: border-box;
+	width: 200px;
+	border: #d7decc solid 1px;
+	border-radius: 5px;
+	padding: 10px;
+	font-size: 20px;
+}
+.insurance_calculator .con .form .item>div:last-child .unit{
+	flex: auto;
+	margin-left: 10px;
+}
+.insurance_calculator .con .form .item>div:last-child input:focus{
+	border: #008bd0 solid 1px;
+}
+.insurance_calculator .con .form .item>div:last-child input[type=radio]{
+	display: none;
+}
+.insurance_calculator .con .form .item>div:last-child input[type=radio]+.icon{
+	display: inline-block;
+	width: 20px;
+	height: 20px;
+	border-radius: 20px;
+	border: #999 solid 2px;
+	vertical-align: middle;
+	margin-right: 5px;
+}
+.insurance_calculator .con .form .item>div:last-child input[type=radio]:checked+.icon{
+	border: #008bd0 solid 2px;
+}
+.insurance_calculator .con .form .item>div:last-child input[type=radio]:checked+.icon::after{
+	content: "";
+	width: 10px;
+	height: 10px;
+	border-radius: 10px;
+	background: #008bd0;
+	margin: 5px;
+	display: block;
+}
+.insurance_calculator .btn_group{
+	text-align: center;
+	margin: 20px;
+}
+.insurance_calculator .btn_group button{
+	border: 0;
+	width: 140px;
+	height: 56px;
+	color: #fff;
+	font-size: 26px;
+	cursor: pointer;
+}
+.insurance_calculator .btn_group button:hover{
+	opacity: 0.8;
+}
+.insurance_calculator .btn_group button:first-child{
+	background: #00acdf;
+	border-radius: 26px 0px 0px 26px/26px 0px 0px 26px;
+}
+.insurance_calculator .btn_group button:last-child{
+	background: #008bd0;
+	border-radius: 0px 26px 26px 0px/0px 26px 26px 0px;
+}
+.hot_product{
+	background: #f1f5f7;
+	padding: 30px 0;
+}
+.hot_product .con{
+	width: 1500px;
+	margin: 0px auto;
+}
+.product_list_big{
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+}
+.product_list_big li{
+	width: 450px;
+	background: #fff;
+	margin-bottom: 30px;
+}
+.product_list_big .pic{
+	width: 450px;
+	height: 300px;
+	display: flex;
+	align-items: center;
+	overflow: hidden;
+	background-position:center;
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+.product_list_big .pic:hover{
+	transform: scale(1.1);
+}
+.product_list_big .pic img{
+	width: 100%;
+}
+.product_list_big .text{
+	position: relative;
+	background: #fff;
+	border-radius: 10px;
+	padding: 30px 15px;
+	text-align: center;
+}
+.product_list_big .name{
+	font-size: 26px;
+	color: #333;
+}
+.product_list_big .remark{
+	font-size: 18px;
+	color: #999;
+	margin: 10px 0;
+}
+.product_list_big .btn{
+	display: inline-block;
+	background: #008BD0;
+	color: #fff;
+	font-size: 24px;
+	padding: 10px 40px;
+	border-radius: 5px;
+}
+.product_list_big .btn:hover{
+	background: #00acdf;
+}
+.product_list_small{
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	margin-top: 30px;
+}
+.product_list_small li{
+	width: 355px;
+	margin-bottom: 30px;
+}
+.product_list_small .pic{
+	width: 355px;
+	height: 250px;
+	display: flex;
+	align-items: center;
+	overflow: hidden;
+	background-position:center;
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+.product_list_small .pic:hover{
+	transform: scale(1.1);
+}
+.product_list_small .pic img{
+	width: 100%;
+}
+.product_list_small .text{
+	position: relative;
+	top: -30px;
+	margin: 0 20px;
+	background: #fff;
+	border-radius: 10px;
+	padding: 30px 10px;
+	text-align: center;
+}
+.product_list_small .name{
+	font-size: 22px;
+	color: #333;
+}
+.product_list_small .remark{
+	font-size: 18px;
+	color: #999;
+	margin: 10px 0;
+}
+.product_list_small .btn{
+	display: inline-block;
+	background: #008BD0;
+	color: #fff;
+	font-size: 24px;
+	padding: 10px 40px;
+	border-radius: 5px;
+}
+.product_list_small .btn:hover{
+	background: #00acdf;
+}
+.more{
+	display: block;
+	width: 180px;
+	height: 58px;
+	text-align: center;
+	line-height: 58px;
+	color: #fff;
+	background: #00ACDF;
+	font-size: 24px;
+	border-radius: 30px;
+	margin: 30px auto;
+}
+.more:hover{
+	background: #007DDB;
+}
+.more_text{
+	text-align: center;
+	font-size: 18px;
+	color: #999;
+	margin-bottom: 30px;
+}
+.contrast{
+	background: url(../imgs/page_banner.jpg) center top no-repeat;
+	min-width: 1500px;
+	padding: 30px 0;
+}
+.contrast .index_column_title{
+	color: #fff;
+}
+.contrast .index_column_title::before{
+	border:#fff solid 8px;
+}
+.contrast .con{
+	width: 1500px;
+	margin: 30px auto;
+}
+.contrast_list li{
+	background: #fff;
+	border: #f0f0f0 solid 3px;
+	border-radius: 5px;
+	padding: 35px;
+	margin: 30px 0;
+}
+.contrast_list li.active{
+	border: #008bd0 solid 3px;
+	background: #e2f1f9;
+}
+.contrast_list li>div{
+	display: flex;
+	justify-content: space-between;
+}
+.contrast_list .name{
+	font-size: 36px;
+	color: #333;
+}
+.contrast_list .contrast_btn{
+	height: 48px;
+	line-height: 48px;
+	color: #008BD0;
+	font-size: 26px;
+	border: #008BD0 solid 3px;
+	border-radius: 25px;
+	background: url(../imgs/contrast_icon_01.png) 20px center no-repeat;
+	padding: 0 20px 0 60px;
+	cursor: pointer;
+}
+.contrast_list .contrast_btn:hover{
+	opacity: 0.8;
+}
+.contrast_list li.active .contrast_btn{
+	background: #008bd0 url(../imgs/contrast_icon_02.png) 20px center no-repeat;
+	color: #fff;
+}
+.contrast_list .introduce{
+	margin: 30px 0;
+}
+.contrast_list .introduce .key{
+	font-size: 26px;
+	color: #999;
+}
+.contrast_list .introduce .val{
+	font-size: 36px;
+	color: #008bd0;
+	font-weight: bold;
+	margin-top: 15px;
+}
+.contrast_list .apply_btn{
+	background: #008BD0;
+	font-size: 26px;
+	font-weight: bold;
+	color: #fff;
+	padding: 10px 30px;
+	border-radius: 5px;
+	cursor: pointer;
+}
+.contrast_list .apply_btn:hover{
+	background: #00acdf;
+}
+.contrast_fixed{
+	width: 100px;
+	position: fixed;
+	top: 50%;
+	right: 15px;
+	transform: translateY(-50%);
+	z-index: 10000;
+	display: none;
+}
+.contrast_fixed .icon{
+	height: 75px;
+	border-radius: 50px 50px 0px 0px/50px 50px 0px 0px;
+	background: #008bd0 url(../imgs/contrast_icon_02.png) center no-repeat;
+	position: relative;
+}
+.contrast_fixed .icon span{
+	position: absolute;
+	text-align: center;
+	top: 10px;
+	right: 20px;
+	width: 20px;
+	height: 20px;
+	line-height: 20px;
+	color: #fff;
+	background: red;
+	border-radius: 100%;
+}
+.contrast_fixed .contrast_btn{
+	height: 170px;
+	border-radius: 0px 0px 50px 50px/0px 0px 50px 50px;
+	background: #008bd0;
+	color: #fff;
+	font-size: 30px;
+	font-weight: bold;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin-top: 3px;
+	cursor: pointer;
+}
+.contrast_fixed .contrast_btn:hover{
+	background: #00acdf;
+}
+.contrast_fixed .del_btn{
+	display: block;
+	height: 100px;
+	border-radius: 100%;
+	background: #f1b968 url(../imgs/del_icon.png) center no-repeat;
+	margin-top: 5px;
+	cursor: pointer;
+}
+.contrast_fixed .del_btn:hover{
+	background: #ea7d3c url(../imgs/del_icon.png) center no-repeat;
+}
+.fly-into{
+	position: fixed;
+	width: 20px;
+	height: 20px;
+	border-radius: 100%;
+	background: red;
+	z-index: 10000;
+	-webkit-transition:none;
+	-o- transition:none;
+	 -moz-transition:none;
+	 transition:none;
+}
